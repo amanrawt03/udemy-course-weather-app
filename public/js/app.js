@@ -7,7 +7,7 @@ function handleOnSearch(e) {
   mesg1.textContent = "loading...";
   mesg2.textContent = " ";
   if (input) {
-    fetch(`http://localhost:3000/weather?address=${input}`)
+    fetch(`/weather?address=${input}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {

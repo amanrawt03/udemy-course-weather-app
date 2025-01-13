@@ -4,6 +4,7 @@ dotenv.config()
 const path = require('path')
 const hbs = require('hbs')
 const app = express()
+const PORT = process.env.PORT || 3000
 const getGeoLocation = require('./utils/getGeoLocation.js')
 const getForecast = require('./utils/getForecast.js')
 const staticFilesPath = path.join(__dirname,'./public')
@@ -63,7 +64,7 @@ app.get('*', (req,res)=>{
         error:"Page not found"
     })
 })
-app.listen(3000, ()=>{
-    console.log('server running at http://localhost:3000');
+app.listen(PORT, ()=>{
+    console.log(`server running at http://localhost:${PORT}`);
     
 })
