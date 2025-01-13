@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>Use this site to get your weather!</p>
+        <form onsubmit="handleOnSearch(event)">
+            <input type="text" id="location" placeholder="Enter address name" value="">
+            <button type="submit">Search</button>
+        </form>
+        <p id="mesg-1"></p>
+        <p id="mesg-2"></p>
+    </div>
+
+    {{>footer}}
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
